@@ -1,0 +1,18 @@
+---
+#It works only with Ansible 2.0 that supports the header option in get_url.
+#If using Ansible 2 use this task for its idempotency.
+#- name: RedHat/Centos | Downloading Java 8 sdk (ansible 2.0)
+#  get_url: url={{ jre_url }} dest=/opt/ "headers=Cookie':' gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" validate_certs=no
+
+- name: RedHat/Centos | Downloading Java 8 sdk
+  command: >
+    wget --no-cookies --no-check-certificate
+    --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" {{ jre_url }}
+    chdir=/opt
+
+- name: RedHat/Centos | Removing Openjdk 1.8.0
+  yum: name=java-1.8.0-openjdk state=absent
+  when: openjdk == 1
+
+- name: RedHat/Centos | Installing Java 8
+  yum: name=/opt/jdk-8u77-linux-x64.rpm state=present

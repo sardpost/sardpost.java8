@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Davide Puggioni
+  description: Oracle Java JDK 8 installation on RHEL/Centos 7
+  company: myCompany.Dotcom
+  license: license (GPLv3)
+  min_ansible_version: 1.9
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  categories:
+  - system
+dependencies: []

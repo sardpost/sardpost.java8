@@ -1,0 +1,8 @@
+---
+# tasks file for sardpost.java8
+
+- name: "RHEL/Centos | Starting Java 8 installation"
+  include: "EL.yml"
+  when: ansible_os_family == "RedHat"
+  tags:
+    - always

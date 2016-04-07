@@ -1,0 +1,4 @@
+---
+# defaults file for sardpost.java8
+jre_url: http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jdk-8u77-linux-x64.rpm
+openjdk: 1

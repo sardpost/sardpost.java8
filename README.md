@@ -22,7 +22,7 @@ No dependencies
 
 Example Playbook
 ----------------
-
+```yml
       - name: Install Java 8
         hosts: test_lab
         remote_user: centos
@@ -30,7 +30,7 @@ Example Playbook
 
         roles:
         - sardpost.java8
-
+```
 Version:
 --------
 0.1

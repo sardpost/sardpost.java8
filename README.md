@@ -2,7 +2,7 @@ Role Name: sardpost.java8
 =========================
 
 Ansible role for installing Oracle Java JDK 8 (jdk-8u77) on EL 7 platform (RHEL/Centos 7).
-It checks if Openjdk is installed and removes it (when "openjdk:" variable in defauts/main.yml
+It checks if Openjdk is installed and removes it (when "openjdk:" variable in defaults/main.yml
 is set to 1 (default)). The jre_url in defaults/main.yml specifies the download url.
 
         jre_url: http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jdk-8u77-linux-x64.rpm
